@@ -1,6 +1,6 @@
 
 locals {
-  ports = [80, 81, 22, 443]
+  ports = var.port_number
 }
 
 resource "aws_security_group" "Security-NSA" {

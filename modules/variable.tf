@@ -49,8 +49,8 @@ variable "region" {
 
 variable "AZs" {
   description = "this is for list of azs available"
-  default     = ["ap-south-1a", "ap-south-1b", "ap-south-1c"]
-  type        = list(string)
+  default     = "ap-south-1a"
+  type        = string
 }
 
 variable "name" {

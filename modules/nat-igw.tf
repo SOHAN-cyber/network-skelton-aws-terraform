@@ -5,7 +5,7 @@ resource "aws_nat_gateway" "my-nat" {
   subnet_id     = aws_subnet.public-subnet-1.id
 
   tags = {
-    Name = "NAT-GATE"
+    Name = format("%s-NG", var.name)
   }
 }
 
@@ -15,7 +15,7 @@ resource "aws_internet_gateway" "my-gateway" {
   vpc_id = aws_vpc.my-aws_vpc.id
 
   tags = {
-    Name = "MY-IGW"
+   Name = format("%s-gate", var.name)
   }
 }
 
